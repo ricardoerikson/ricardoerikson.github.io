@@ -1,7 +1,6 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 name: Deploy my Angular website to GitHub Pages
-
 on:
   push:
     branches: [main]
@@ -20,14 +19,16 @@ jobs:
         with:
           node-version: 10.x
       - name: Install dependencies
-      - run: npm ci
+        run: npm ci
       - name: Build
         env:
           CNAME: ricardoerikson.me
-        run: npx semantic-release --dryRun --extends ./.release/next-version.config.js
-      - run: npm run build:prod
+        run: |
+          npx semantic-release --dryRun --extends ./.release/next-version.config.js
+          npm run build:prod
       - name: Release and deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx semantic-release --extends ./.release/release.config.js
-      - run: npm run deploy:prod
+        run: |
+          npx semantic-release --extends ./.release/release.config.js
+          npm run deploy:prod
