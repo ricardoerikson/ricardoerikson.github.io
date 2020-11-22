@@ -3,8 +3,8 @@
   "version": "0.0.0-development",
   "scripts": {
     "start": "ng serve",
-    "build:prod": "ng build",
-    "deploy": "angular-cli-ghpages",
+    "build:prod": "ng build --prod",
+    "deploy:prod": "ngh --branch=deploy --cname=$CNAME",
     "semantic-release": "semantic-release"
   },
   "private": true,
@@ -30,6 +30,7 @@
     "@semantic-release/changelog": "github:semantic-release/changelog",
     "@semantic-release/commit-analyzer": "github:semantic-release/commit-analyzer",
     "@semantic-release/exec": "github:semantic-release/exec",
+    "@semantic-release/git": "^9.0.0",
     "@semantic-release/release-notes-generator": "github:semantic-release/release-notes-generator",
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",

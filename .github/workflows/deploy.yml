@@ -5,7 +5,7 @@ name: Deploy my Angular website to GitHub Pages
 
 on:
   push:
-    branches: [ develop ]
+    branches: [ main ]
 
 jobs:
   deploy:
@@ -20,7 +20,16 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 10.x
-    - name: Build
+    - name: Install dependencies
       run: npm ci
+    - name: Build
+      env:
+        CNAME: ricardoerikson.me
+      run: npx semantic-release --dryRun --extends ./.release/next-version.config.js
       run: npm run build:prod
+    - name: Release and deploy
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: npx semantic-release --extends ./.release/release.config.js
+      run: npm run deploy:prod
      
