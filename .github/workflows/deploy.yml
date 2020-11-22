@@ -28,8 +28,10 @@ jobs:
         env:
           CNAME: ricardoerikson.me
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GOOGLE_ANALYTICS: ${{ secrets.GOOGLE_ANALYTICS }}
         run: |
           git config user.name "Ricardo Erikson"
           git config user.email "ricardoerikson@gmail.com"
+          nodejs analytics-build.js
           npm run deploy:prod
           npx semantic-release --extends ./.release/release.config.js
