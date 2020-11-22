@@ -24,10 +24,10 @@ jobs:
       - name: Build
         env:
           CNAME: ricardoerikson.me
-      - run: npx semantic-release --dryRun --extends ./.release/next-version.config.js
+        run: npx semantic-release --dryRun --extends ./.release/next-version.config.js
       - run: npm run build:prod
       - name: Release and deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: npx semantic-release --extends ./.release/release.config.js
+        run: npx semantic-release --extends ./.release/release.config.js
       - run: npm run deploy:prod
