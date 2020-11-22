@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
+import { Component, OnInit, Version } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
+  version: Version;
 
-  constructor() { }
+  constructor(private http: HttpClient) {
+  }
 
   ngOnInit(): void {
+    this.http.get<Version>('assets/version.json').subscribe(version => {
+      this.version = version;
+    });
+
   }
 
 }
+
