@@ -1,27 +1,23 @@
-# GhPages
+<h1>ricardoerikson.me - GitHub Pages</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.9.
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/ricardoerikson/ricardoerikson.github.io/deploy-to-github-pages/main)](https://github.com/ricardoerikson/ricardoerikson.github.io/tree/main)
+[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/ricardoerikson/ricardoerikson.github.io?sort=semver)](https://github.com/ricardoerikson/ricardoerikson.github.io/releases)
+[![MIT](https://img.shields.io/npm/l/traderjs.svg)](https://opensource.org/licenses/MIT)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
-## Development server
+This project was created for my personal website where I share my professional interests and experiences as a software engineer. The page is hosted on [GitHub Pages](https://pages.github.com/) using a custom domain.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Stack
 
-## Code scaffolding
+This project uses the following technologies:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- [Angular 10](https://angular.io)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- GitHub Actions for automated building and deployment.
 
-## Build
+## Follow me on social media
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- [Linkedin](https://linkedin.com/in/ricardoerikson)
+- [Twitter](https://twitter.com/ricardoerikon)
+- [GitHub](https://github.com/ricardoerikson)
