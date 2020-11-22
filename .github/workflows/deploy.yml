@@ -2,34 +2,32 @@
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
 name: Deploy my Angular website to GitHub Pages
-
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   deploy:
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
-    - name: Node.js setup
-      uses: actions/setup-node@v1
-      with:
-        node-version: 10.x
-    - name: Install dependencies
-      run: npm ci
-    - name: Build
-      env:
-        CNAME: ricardoerikson.me
-      run: npx semantic-release --dryRun --extends ./.release/next-version.config.js
-      run: npm run build:prod
-    - name: Release and deploy
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: npx semantic-release --extends ./.release/release.config.js
-      run: npm run deploy:prod
-     
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Node.js setup
+        uses: actions/setup-node@v1
+        with:
+          node-version: 10.x
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        env:
+          CNAME: ricardoerikson.me
+      - run: npx semantic-release --dryRun --extends ./.release/next-version.config.js
+      - run: npm run build:prod
+      - name: Release and deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: npx semantic-release --extends ./.release/release.config.js
+      - run: npm run deploy:prod
