@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/ricardoerikson/ricardoerikson.github.io/compare/v1.0.1...v1.1.0) (2020-11-22)
+
+
+### Features
+
+* **analytics:** add google analytics ([f61e6d6](https://github.com/ricardoerikson/ricardoerikson.github.io/commit/f61e6d6a672b95bb2b2a336c79ae75c903b2673c))
+
 ## [1.0.1](https://github.com/ricardoerikson/ricardoerikson.github.io/compare/v1.0.0...v1.0.1) (2020-11-22)
 
 
