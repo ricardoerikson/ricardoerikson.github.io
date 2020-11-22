@@ -25,7 +25,7 @@ jobs:
           GOOGLE_ANALYTICS: ${{ secrets.GOOGLE_ANALYTICS }}
         run: |
           npm run build:prod
-          node templates-compiler.js
+          node template-compiler.js
       - name: Release and deploy
         env:
           CNAME: ricardoerikson.me
