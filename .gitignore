@@ -1,8 +1,5 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
-# Temp files for building process
-src/assets/version.json
-
 # compiled output
 /dist
 /tmp

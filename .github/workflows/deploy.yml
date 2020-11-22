@@ -21,17 +21,17 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build
+        env:
+          GOOGLE_ANALYTICS: ${{ secrets.GOOGLE_ANALYTICS }}
         run: |
-          npx semantic-release --dryRun --extends ./.release/next-version.config.js
           npm run build:prod
+          node templates-compiler.js
       - name: Release and deploy
         env:
           CNAME: ricardoerikson.me
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GOOGLE_ANALYTICS: ${{ secrets.GOOGLE_ANALYTICS }}
         run: |
           git config user.name "Ricardo Erikson"
           git config user.email "ricardoerikson@gmail.com"
-          node analytics-replacer.js
           npm run deploy:prod
-          npx semantic-release --extends ./.release/release.config.js
+          npx semantic-release
