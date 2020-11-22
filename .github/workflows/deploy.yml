@@ -21,14 +21,13 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build
-        env:
-          CNAME: ricardoerikson.me
         run: |
           npx semantic-release --dryRun --extends ./.release/next-version.config.js
           npm run build:prod
       - name: Release and deploy
         env:
+          CNAME: ricardoerikson.me
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          npx semantic-release --extends ./.release/release.config.js
           npm run deploy:prod
+          npx semantic-release --extends ./.release/release.config.js
