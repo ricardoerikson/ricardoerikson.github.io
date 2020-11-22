@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/ricardoerikson/ricardoerikson.github.io/compare/v1.0.0...v1.0.1) (2020-11-22)
+
+
+### Bug Fixes
+
+* **build:** change output dir to dist/ ([289b0de](https://github.com/ricardoerikson/ricardoerikson.github.io/commit/289b0de4b71bec4e370b2ad26a16230d79fb6e4a))
+
 # 1.0.0 (2020-11-22)
 
 
