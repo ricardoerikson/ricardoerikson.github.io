@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/ricardoerikson/ricardoerikson.github.io/compare/v1.1.0...v1.1.1) (2020-11-22)
+
+
+### Bug Fixes
+
+* **version:** change request url to absolute path ([044fc60](https://github.com/ricardoerikson/ricardoerikson.github.io/commit/044fc60d3bdb62ba0eef87157244ba61e227fc9f))
+
 # [1.1.0](https://github.com/ricardoerikson/ricardoerikson.github.io/compare/v1.0.1...v1.1.0) (2020-11-22)
 
 
