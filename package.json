@@ -4,7 +4,7 @@
   "scripts": {
     "start": "ng serve",
     "build:prod": "ng build --prod",
-    "deploy:prod": "ngh --no-silent --branch=deploy --cname=$CNAME",
+    "deploy:prod": "ngh --no-silent --branch=deploy --cname=$CNAME --name='$GIT_NAME' --email='$GIT_EMAIL'",
     "semantic-release": "semantic-release"
   },
   "private": true,
