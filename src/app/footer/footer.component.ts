@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Version } from '../version.model';
+import { Version } from '../custom.types';
 
 @Component({
   selector: 'app-footer',

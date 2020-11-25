@@ -15,28 +15,7 @@
         alt="">
     </div>
     <div class="flex text-blue-600 pt-8">
-      <div class="mr-6">
-        <a href="https://github.com/ricardoerikson" target="blank">
-          <i class="fab fa-github text-5xl"></i>
-        </a>
-      </div>
-      <div class="mr-6">
-        <a href="https://linkedin.com/in/ricardoerikson" target="blank">
-          <i class="fab fa-linkedin text-5xl"></i>
-        </a>
-      </div>
-      <div class="mr-6">
-        <a href="https://twitter.com/ricardoerikson" target="blank">
-          <i class="fab fa-twitter text-5xl"></i>
-        </a>
-      </div>
-      <div class="mr-6">
-        <a href="mailto:ricardo@ricardoerikson.me">
-          <i class="fas fa-at text-5xl"></i>
-        </a>
-      </div>
-
+      <app-icon *ngFor="let link of links" [link]="link"></app-icon>
     </div>
   </div>
-
 </div>
