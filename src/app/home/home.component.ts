@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Link } from '../custom.types'
+import { LinkConfig } from '../custom.types';
 
 
 @Component({
@@ -9,26 +9,31 @@ import { Link } from '../custom.types'
 })
 export class HomeComponent implements OnInit {
 
-  links: Link[] = [
+  links: LinkConfig[] = [
     {
       url: 'https://linkedin.com/in/ricardoerikson',
-      classes: 'fab fa-linkedin'
+      classes: 'fab fa-linkedin',
+      tooltip: 'LinkedIn'
     },
     {
       url: 'https://twitter.com/ricardoerikson',
-      classes: 'fab fa-twitter'
+      classes: 'fab fa-twitter',
+      tooltip: 'Twitter'
     },
     {
       url: 'https://github.com/ricardoerikson',
-      classes: 'fab fa-github'
+      classes: 'fab fa-github',
+      tooltip: 'GitHub'
     },
     {
       url: 'https://www.hackerrank.com/ricardoerikson',
-      classes: 'fab fa-hackerrank'
+      classes: 'fab fa-hackerrank',
+      tooltip: 'HackerRank'
     },
     {
       url: 'mailto:ricardo@ricardoerikson.me',
-      classes: 'fas fa-at'
+      classes: 'fas fa-at',
+      tooltip: 'Email'
     }
   ]
 

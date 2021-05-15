@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Link } from '../custom.types';
+import { LinkConfig } from '../custom.types';
 
 @Component({
   selector: 'app-icon',
@@ -8,7 +8,7 @@ import { Link } from '../custom.types';
 })
 export class IconComponent implements OnInit {
 
-  @Input() link: Link;
+  @Input() link: LinkConfig;
 
   constructor() { }
 
