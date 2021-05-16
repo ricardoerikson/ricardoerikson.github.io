@@ -93,7 +93,7 @@ export const content = {
         paragraphs: [
           {
             type: 'text',
-            text: 'Feel free to reach out to me at <a class="${ link.primary }" href="mailto:ricardo@ricardoerikson.me">ricardo@ricardoerikson.me</a>',
+            text: 'Feel free to reach out to me at <a class="${ link.primary }" href="mailto:ricardo@ricardoerikson.me">ricardo@ricardoerikson.me</a>.',
             templates: ['link.primary']
           }
         ]
