@@ -5,8 +5,8 @@ export const config = {
   },
   iconsColor: 'text-blue-600',
   text: {
-    fontSize: 'text-lg',
-    primaryColor: 'text-gray-700'
+    primary: 'text-lg text-gray-700 tracking-normal leading-relaxed',
+    secondary: 'text-normal text-gray-700 font-light'
   },
   navbar: {
     links: [

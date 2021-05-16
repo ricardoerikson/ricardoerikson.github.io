@@ -1,12 +1,11 @@
 <ng-container [ngSwitch]="paragraph.type">
   <p *ngSwitchCase="'text'" [innerHtml]="paragraph.text" class="tracking-normal leading-relaxed my-5"
-    [ngClass]="[config.text.primaryColor, config.text.fontSize]">
+    [ngClass]="config.text.primary">
 
   </p>
   <ng-container *ngSwitchCase="'list'">
-    <p [innerHtml]="paragraph.text" class="tracking-normal leading-relaxed my-5"
-      [ngClass]="[config.text.primaryColor, config.text.fontSize]"></p>
-    <ul class="list-inside list-disc space-y-2" [ngClass]="[config.text.primaryColor, config.text.fontSize]">
+    <p [innerHtml]="paragraph.text" class="my-5" [ngClass]="config.text.primary"></p>
+    <ul class="list-inside list-disc space-y-2" [ngClass]="config.text.primary">
       <li *ngFor="let item of paragraph.list" [innerHtml]="item"></li>
     </ul>
   </ng-container>
@@ -14,10 +13,8 @@
     <p class="my-10">
       <a [ngClass]="config.link.primary" target="blank" class="text-xl block"
         [href]="paragraph.link">{{paragraph.title}}</a>
-      <span class="font-light text-normal space-x-5">
-        <span [ngClass]="config.text.primaryColor">
-          {{paragraph.when}}
-        </span>
+      <span class="space-x-5" [ngClass]="config.text.secondary">
+        {{paragraph.when}} -
         <a [ngClass]="config.link.secondary" target="blank" [href]="paragraph.whereLink">{{paragraph.where}}</a>
       </span>
     </p>
