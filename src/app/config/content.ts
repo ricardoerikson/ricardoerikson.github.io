@@ -127,7 +127,7 @@ export const content = {
         paragraphs: [
           {
             type: 'text',
-            text: "I'm posting my texts on <a class='${ link.primary }' target='blank' href='https://ricardoerikson.medium.com/'>Medium</a>. Feel free to follow my publications.",
+            text: "I'm posting my texts on <a class='${ link.primary }' target='blank' href='https://ricardoerikson.medium.com/'>Medium</a>. Feel free to leave your comments in my publications. Follow me on <a class='${ link.primary }' target='blank' href='https://ricardoerikson.medium.com/'>Medium</a> to receive alerts in future publications.",
             templates: ['link.primary']
           }
         ]
