@@ -8,6 +8,7 @@ export class ContentService {
 
   private _home: any = content.home;
   private _about: any = content.about;
+  private _contact: any = content.contact;
 
   constructor() { }
 
@@ -17,6 +18,10 @@ export class ContentService {
 
   get about(): any {
     return this._about;
+  }
+
+  get contact(): any {
+    return this._contact;
   }
 
 }

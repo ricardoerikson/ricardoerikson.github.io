@@ -19,6 +19,11 @@ export const content = {
         tooltip: "GitHub"
       },
       {
+        url: "https://stackoverflow.com/users/2102916/ricardo-erikson?tab=profile",
+        classes: "fab fa-stack-overflow",
+        tooltip: "Stack Overflow"
+      },
+      {
         url: "https://www.hackerrank.com/ricardoerikson",
         classes: "fab fa-hackerrank",
         tooltip: "HackerRank"
@@ -69,6 +74,39 @@ export const content = {
           {
             type: "text",
             text: "Are you interested in any of those topics too? Feel free to reach out to me at <a class='${ linkClass }' href='mailto:ricardo@ricardoerikson.me'>ricardo@ricardoerikson.me</a>.",
+            templates: ['linkClass']
+          }
+        ]
+      }
+    ]
+  },
+  contact: {
+    sections: [
+      {
+        level: 1,
+        title: 'Contact',
+        paragraphs: [
+          {
+            type: 'text',
+            text: 'Feel free to reach out to me at <a class="${ linkClass }" href="mailto:ricardo@ricardoerikson.me">ricardo@ricardoerikson.me</a>',
+            templates: ['linkClass']
+          }
+        ]
+      },
+      {
+        level: 2,
+        title: 'Follow me on social media',
+        paragraphs: [
+          {
+            type: 'list',
+            text: '',
+            list: [
+              '<a class="${ linkClass }" target="blank" href="https://linkedin.com/in/ricardoerikson">LinkedIn</a>',
+              '<a class="${ linkClass }" target="blank" href="https://twitter.com/ricardoerikson">Twitter</a>',
+              '<a class="${ linkClass }" target="blank" href="https://github.com/ricardoerikson">GitHub</a>',
+              '<a class="${ linkClass }" target="blank" href="https://stackoverflow.com/users/2102916/ricardo-erikson?tab=profile">StackOverflow</a>',
+              '<a class="${ linkClass }" target="blank" href="https://www.hackerrank.com/ricardoerikson">HackerRank</a>'
+            ],
             templates: ['linkClass']
           }
         ]
