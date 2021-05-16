@@ -4,5 +4,21 @@ export const config = {
   text: {
     fontSize: 'text-lg',
     primaryColor: 'text-gray-700'
+  },
+  navbar: {
+    links: [
+      {
+        routerLink: '/blog',
+        name: 'Blog'
+      },
+      {
+        routerLink: '/contact',
+        name: 'Contact'
+      },
+      {
+        routerLink: '/about',
+        name: 'About'
+      },
+    ]
   }
 };
