@@ -29,6 +29,11 @@ export const content = {
         tooltip: "HackerRank"
       },
       {
+        url: "https://ricardoerikson.medium.com",
+        classes: "fab fa-medium",
+        tooltip: "Medium"
+      },
+      {
         url: "mailto:ricardo@ricardoerikson.me",
         classes: "fas fa-at",
         tooltip: "Email"
@@ -64,7 +69,7 @@ export const content = {
             type: "list",
             text: 'My main topics of interest are the following (not necessarily in that order):',
             list: [
-              "High performance in professional and personal life",
+              "High performance in professionlinkClasal and personal life",
               "Derivatives/stocks market",
               "Software development",
               "Decision-making",
