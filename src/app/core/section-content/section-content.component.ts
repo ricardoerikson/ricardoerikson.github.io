@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as _ from 'lodash';
+import * as _ from 'lodash-es';
 import { ConfigService } from '../../services/config.service';
 
 
