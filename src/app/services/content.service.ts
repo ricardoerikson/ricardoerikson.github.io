@@ -4,7 +4,7 @@ import { content } from '../config/content';
 @Injectable({
   providedIn: 'root'
 })
-export class ConfigService {
+export class ContentService {
 
   private _home: any = content.home;
   private _about: any = content.about;

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LinkConfig } from '../custom.types';
-import { ConfigService } from '../services/config.service';
+import { ContentService } from '../services/content.service';
 
 
 @Component({
@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   links: LinkConfig[];
   home: any;
 
-  constructor(private config: ConfigService) { }
+  constructor(private config: ContentService) { }
 
   ngOnInit(): void {
     this.home = this.config.home;
