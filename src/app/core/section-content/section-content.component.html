@@ -1,0 +1,14 @@
+<ng-container [ngSwitch]="paragraph.type">
+  <p *ngSwitchCase="'text'" [innerHtml]="paragraph.text" class="tracking-wide leading-relaxed my-5">
+
+  </p>
+  <ng-container *ngSwitchCase="'list'">
+    <p [innerHtml]="paragraph.text" class="my-5"></p>
+    <ul class="list-inside list-disc space-y-2">
+      <li *ngFor="let item of paragraph.list" [innerHtml]="item"></li>
+    </ul>
+  </ng-container>
+  <p *ngSwitchDefault>
+
+  </p>
+</ng-container>
