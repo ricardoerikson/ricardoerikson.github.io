@@ -112,5 +112,34 @@ export const content = {
         ]
       }
     ]
+  },
+  blog: {
+    sections: [
+      {
+        level: 1,
+        title: 'Blog',
+        paragraphs: [
+          {
+            type: 'text',
+            text: "I'm posting my texts on <a class='${ linkClass }' target='blank' href='https://ricardoerikson.medium.com/'>Medium</a>. Feel free to follow my publications.",
+            templates: ['linkClass']
+          }
+        ]
+      },
+      {
+        level: 2,
+        title: 'My recent publications',
+        paragraphs: [
+          {
+            type: 'post',
+            title: 'Memory Allocation and Performance in Golang Maps',
+            link: 'https://levelup.gitconnected.com/memory-allocation-and-performance-in-golang-maps-b267b5ad9217',
+            where: 'LevelUp Coding',
+            whereLink: 'https://levelup.gitconnected.com/',
+            when: 'Jan 25, 2021'
+          }
+        ]
+      }
+    ]
   }
 }

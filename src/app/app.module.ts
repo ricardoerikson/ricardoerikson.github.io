@@ -12,6 +12,7 @@ import { SectionComponent } from './core/section/section.component';
 import { TitleComponent } from './core/title/title.component';
 import { HomeComponent } from './home/home.component';
 import { IconComponent } from './icon/icon.component';
+import { BlogComponent } from './blog/blog.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { IconComponent } from './icon/icon.component';
     TitleComponent,
     SectionComponent,
     SectionContentComponent,
-    ContactComponent
+    ContactComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,

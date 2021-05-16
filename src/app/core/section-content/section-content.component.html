@@ -10,6 +10,19 @@
       <li *ngFor="let item of paragraph.list" [innerHtml]="item"></li>
     </ul>
   </ng-container>
+  <ng-container *ngSwitchCase="'post'">
+    <p class="my-10">
+      <a [ngClass]="config.linkClass" target="blank" class="text-xl block"
+        [href]="paragraph.link">{{paragraph.title}}</a>
+      <span class="font-light text-normal space-x-5">
+        <span [ngClass]="config.text.primaryColor">
+          {{paragraph.when}}
+        </span>
+        <a [ngClass]="config.link.secondary" target="blank" [href]="paragraph.whereLink">{{paragraph.where}}</a>
+      </span>
+    </p>
+  </ng-container>
+
   <p *ngSwitchDefault>
 
   </p>
