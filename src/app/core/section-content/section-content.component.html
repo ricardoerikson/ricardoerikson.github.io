@@ -1,10 +1,12 @@
 <ng-container [ngSwitch]="paragraph.type">
-  <p *ngSwitchCase="'text'" [innerHtml]="paragraph.text" class="tracking-wide leading-relaxed my-5">
+  <p *ngSwitchCase="'text'" [innerHtml]="paragraph.text" class="tracking-normal leading-relaxed my-5"
+    [ngClass]="[config.text.primaryColor, config.text.fontSize]">
 
   </p>
   <ng-container *ngSwitchCase="'list'">
-    <p [innerHtml]="paragraph.text" class="my-5"></p>
-    <ul class="list-inside list-disc space-y-2">
+    <p [innerHtml]="paragraph.text" class="tracking-normal leading-relaxed my-5"
+      [ngClass]="[config.text.primaryColor, config.text.fontSize]"></p>
+    <ul class="list-inside list-disc space-y-2" [ngClass]="[config.text.primaryColor, config.text.fontSize]">
       <li *ngFor="let item of paragraph.list" [innerHtml]="item"></li>
     </ul>
   </ng-container>

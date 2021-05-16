@@ -11,7 +11,8 @@ export const content = {
         paragraphs: [
           {
             type: "text",
-            text: "My name is Ricardo, and I'm a software engineer with 10+ years of experience in the software industry. I had the opportunity to collaborate with big players of the software industry like Nokia and Samsung. Currently, I work for <a href='https://www.bairesdev.com'>BairesDev</a> as a Golang engineer."
+            text: "My name is Ricardo, and I'm a software engineer with 10+ years of experience in the software industry. I had the opportunity to collaborate with big players of the software industry like Nokia and Samsung. Currently, I work for <a href='https://www.bairesdev.com' class='${ linkClass }'>BairesDev</a> as a Golang engineer.",
+            templates: ['linkClass']
           },
           {
             type: "text",
@@ -29,18 +30,19 @@ export const content = {
         paragraphs: [
           {
             type: "list",
-            text: 'My main interests are the following (not necessarily in this order):',
+            text: 'My main interests are the following (not necessarily in that order):',
             list: [
               "High performance in professional and personal life",
+              "Derivatives/stocks market",
               "Software development",
               "Decision-making",
-              "Derivatives and stock market",
               "Running"
             ]
           },
           {
             type: "text",
-            text: "Are you interested in some of those topics too? Feel free to reach out to me at <a class='' href='mailto:ricardo@ricardoerikson.me'>ricardo@ricardoerikson.me</a>."
+            text: "Are you interested in any of those topics too? Feel free to reach out to me at <a class='${ linkClass }' href='mailto:ricardo@ricardoerikson.me'>ricardo@ricardoerikson.me</a>.",
+            templates: ['linkClass']
           }
         ]
       }

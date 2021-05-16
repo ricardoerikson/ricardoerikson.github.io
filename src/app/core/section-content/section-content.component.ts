@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import * as _ from 'lodash';
+import { ConfigService } from '../../services/config.service';
+
 
 @Component({
   selector: 'app-section-content',
@@ -8,11 +11,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SectionContentComponent implements OnInit {
 
+  config: any;
   paragraph: any;
+  compiledText: string;
 
-  constructor() { }
+  constructor(private configService: ConfigService) {
+    this.config = configService.config;
+  }
 
   ngOnInit(): void {
+    if (this.paragraph.templates) {
+      const compiled = _.template(this.paragraph.text);
+      this.paragraph.text = compiled(_.pick(this.config, this.paragraph.templates));
+    }
   }
 
 }

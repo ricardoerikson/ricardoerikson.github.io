@@ -4,7 +4,7 @@
       <div class="container">
         <div class="text-left mr-6">
           <h2 class="font-bold text-5xl tracking-tight">{{ home.hi }}</h2>
-          <div class="float-left text-2xl tracking-wide text-gray-700">
+          <div class="float-left text-2xl tracking-normal text-gray-700">
             {{ home.presentationText }}
           </div>
         </div>
@@ -12,7 +12,7 @@
       <img class="rounded-full border-solid border-2 h-48 w-48 mx-0 border-gray-300 my-auto" src="/assets/pic.jpg"
         alt="">
     </div>
-    <div class="flex text-blue-600 pt-8 mt-20">
+    <div class="flex pt-8 mt-20" [ngClass]="textColor">
       <app-icon *ngFor="let link of links" [link]="link"></app-icon>
     </div>
   </div>
