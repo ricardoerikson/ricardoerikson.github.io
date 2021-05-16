@@ -11,6 +11,10 @@ export const config = {
   navbar: {
     links: [
       {
+        routerLink: '/',
+        name: 'Home'
+      },
+      {
         routerLink: '/blog',
         name: 'Blog'
       },
