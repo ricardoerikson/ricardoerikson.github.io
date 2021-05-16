@@ -12,7 +12,7 @@
   </ng-container>
   <ng-container *ngSwitchCase="'post'">
     <p class="my-10">
-      <a [ngClass]="config.linkClass" target="blank" class="text-xl block"
+      <a [ngClass]="config.link.primary" target="blank" class="text-xl block"
         [href]="paragraph.link">{{paragraph.title}}</a>
       <span class="font-light text-normal space-x-5">
         <span [ngClass]="config.text.primaryColor">

@@ -43,8 +43,8 @@ export const content = {
         paragraphs: [
           {
             type: "text",
-            text: "My name is Ricardo, and I'm a software engineer with 10+ years of experience in the software industry. I had the opportunity to collaborate with big players of the software industry like Nokia and Samsung. Currently, I work for <a href='https://www.bairesdev.com' class='${ linkClass }'>BairesDev</a> as a Golang engineer.",
-            templates: ['linkClass']
+            text: "My name is Ricardo, and I'm a software engineer with 10+ years of experience in the software industry. I had the opportunity to collaborate with big players of the software industry like Nokia and Samsung. Currently, I work for <a href='https://www.bairesdev.com' class='${ link.primary }'>BairesDev</a> as a Golang engineer.",
+            templates: ['link.primary']
           },
           {
             type: "text",
@@ -73,8 +73,8 @@ export const content = {
           },
           {
             type: "text",
-            text: "Are you interested in any of those topics too? Feel free to reach out to me at <a class='${ linkClass }' href='mailto:ricardo@ricardoerikson.me'>ricardo@ricardoerikson.me</a>.",
-            templates: ['linkClass']
+            text: "Are you interested in any of those topics too? Feel free to reach out to me at <a class='${ link.primary }' href='mailto:ricardo@ricardoerikson.me'>ricardo@ricardoerikson.me</a>.",
+            templates: ['link.primary']
           }
         ]
       }
@@ -88,8 +88,8 @@ export const content = {
         paragraphs: [
           {
             type: 'text',
-            text: 'Feel free to reach out to me at <a class="${ linkClass }" href="mailto:ricardo@ricardoerikson.me">ricardo@ricardoerikson.me</a>',
-            templates: ['linkClass']
+            text: 'Feel free to reach out to me at <a class="${ link.primary }" href="mailto:ricardo@ricardoerikson.me">ricardo@ricardoerikson.me</a>',
+            templates: ['link.primary']
           }
         ]
       },
@@ -101,13 +101,13 @@ export const content = {
             type: 'list',
             text: '',
             list: [
-              '<a class="${ linkClass }" target="blank" href="https://linkedin.com/in/ricardoerikson">LinkedIn</a>',
-              '<a class="${ linkClass }" target="blank" href="https://twitter.com/ricardoerikson">Twitter</a>',
-              '<a class="${ linkClass }" target="blank" href="https://github.com/ricardoerikson">GitHub</a>',
-              '<a class="${ linkClass }" target="blank" href="https://stackoverflow.com/users/2102916/ricardo-erikson?tab=profile">StackOverflow</a>',
-              '<a class="${ linkClass }" target="blank" href="https://www.hackerrank.com/ricardoerikson">HackerRank</a>'
+              '<a class="${ link.primary }" target="blank" href="https://linkedin.com/in/ricardoerikson">LinkedIn</a>',
+              '<a class="${ link.primary }" target="blank" href="https://twitter.com/ricardoerikson">Twitter</a>',
+              '<a class="${ link.primary }" target="blank" href="https://github.com/ricardoerikson">GitHub</a>',
+              '<a class="${ link.primary }" target="blank" href="https://stackoverflow.com/users/2102916/ricardo-erikson?tab=profile">StackOverflow</a>',
+              '<a class="${ link.primary }" target="blank" href="https://www.hackerrank.com/ricardoerikson">HackerRank</a>'
             ],
-            templates: ['linkClass']
+            templates: ['link.primary']
           }
         ]
       }
@@ -121,8 +121,8 @@ export const content = {
         paragraphs: [
           {
             type: 'text',
-            text: "I'm posting my texts on <a class='${ linkClass }' target='blank' href='https://ricardoerikson.medium.com/'>Medium</a>. Feel free to follow my publications.",
-            templates: ['linkClass']
+            text: "I'm posting my texts on <a class='${ link.primary }' target='blank' href='https://ricardoerikson.medium.com/'>Medium</a>. Feel free to follow my publications.",
+            templates: ['link.primary']
           }
         ]
       },

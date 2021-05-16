@@ -1,6 +1,6 @@
 export const config = {
-  linkClass: ['font-medium', 'text-blue-600', 'hover:text-blue-700', 'hover:underline'].join(' '),
   link: {
+    primary: 'font-medium text-blue-600 hover:text-blue-700 hover:underline',
     secondary: 'font-light text-blue-500 hover:text-blue-500 hover:underline'
   },
   iconsColor: 'text-blue-600',
