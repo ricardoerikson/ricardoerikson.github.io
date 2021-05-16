@@ -4,7 +4,7 @@
   "scripts": {
     "start": "ng serve",
     "build:prod": "ng build --prod",
-    "deploy:prod": "ngh --no-silent --branch=deploy --cname=$CNAME",
+    "deploy:prod": "ngh --no-silent --branch=deploy --cname=$CNAME --name='$GIT_NAME' --email='$GIT_EMAIL'",
     "semantic-release": "semantic-release"
   },
   "private": true,
@@ -17,6 +17,8 @@
     "@angular/platform-browser": "~10.1.6",
     "@angular/platform-browser-dynamic": "~10.1.6",
     "@angular/router": "~10.1.6",
+    "balloon-css": "^1.2.0",
+    "lodash-es": "^4.17.21",
     "rxjs": "~6.6.3",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
@@ -34,6 +36,7 @@
     "@semantic-release/release-notes-generator": "github:semantic-release/release-notes-generator",
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
+    "@types/lodash": "^4.14.169",
     "@types/node": "^12.11.1",
     "angular-cli-ghpages": "^0.6.2",
     "codelyzer": "^5.1.2",

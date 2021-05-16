@@ -2,7 +2,7 @@ const replace = require('replace-in-file');
 
 const options_analytics = {
   files: 'dist/index.html',
-  from: '__GOOGLE_ANALYTICS__',
+  from: '<!-- __GOOGLE_ANALYTICS__ -->',
   to: process.env.GOOGLE_ANALYTICS
 }
 

@@ -1,0 +1,26 @@
+<ng-container [ngSwitch]="paragraph.type">
+  <p *ngSwitchCase="'text'" [innerHtml]="paragraph.text" class="tracking-normal leading-relaxed my-5"
+    [ngClass]="config.text.primary">
+
+  </p>
+  <ng-container *ngSwitchCase="'list'">
+    <p [innerHtml]="paragraph.text" class="my-5" [ngClass]="config.text.primary"></p>
+    <ul class="list-inside list-disc space-y-2" [ngClass]="config.text.primary">
+      <li *ngFor="let item of paragraph.list" [innerHtml]="item"></li>
+    </ul>
+  </ng-container>
+  <ng-container *ngSwitchCase="'post'">
+    <p class="my-10">
+      <a [ngClass]="config.link.primary" target="blank" class="text-xl block"
+        [href]="paragraph.link">{{paragraph.title}}</a>
+      <span class="space-x-5" [ngClass]="config.text.secondary">
+        {{paragraph.when}} -
+        <a [ngClass]="config.link.secondary" target="blank" [href]="paragraph.whereLink">{{paragraph.where}}</a>
+      </span>
+    </p>
+  </ng-container>
+
+  <p *ngSwitchDefault>
+
+  </p>
+</ng-container>
