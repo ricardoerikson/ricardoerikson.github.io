@@ -104,13 +104,14 @@ export const content = {
         paragraphs: [
           {
             type: 'list',
-            text: '',
+            text: 'You can connect, follow me You can connect, follow me and send messages on the following social media:',
             list: [
               '<a class="${ link.primary }" target="blank" href="https://linkedin.com/in/ricardoerikson">LinkedIn</a>',
               '<a class="${ link.primary }" target="blank" href="https://twitter.com/ricardoerikson">Twitter</a>',
               '<a class="${ link.primary }" target="blank" href="https://github.com/ricardoerikson">GitHub</a>',
               '<a class="${ link.primary }" target="blank" href="https://stackoverflow.com/users/2102916/ricardo-erikson?tab=profile">StackOverflow</a>',
-              '<a class="${ link.primary }" target="blank" href="https://www.hackerrank.com/ricardoerikson">HackerRank</a>'
+              '<a class="${ link.primary }" target="blank" href="https://www.hackerrank.com/ricardoerikson">HackerRank</a>',
+              '<a class="${ link.primary }" target="blank" href="https://ricardoerikson.medium.com">Medium</a>'
             ],
             templates: ['link.primary']
           }
