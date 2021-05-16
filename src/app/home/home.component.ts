@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.home = this.contentService.home;
-    this.links = this.contentService.links;
+    this.links = this.contentService.home.links;
     this.textColor = this.config.iconsColor;
   }
 

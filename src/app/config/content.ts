@@ -1,7 +1,34 @@
 export const content = {
   home: {
     hi: "Hey! I'm Ricardo Erikson!",
-    presentationText: "I'm a software engineer from Brazil, and I'm passionate about software design and high-quality code."
+    presentationText: "I'm a software engineer from Brazil, and I'm passionate about software design and high-quality code.",
+    links: [
+      {
+        url: "https://linkedin.com/in/ricardoerikson",
+        classes: "fab fa-linkedin",
+        tooltip: "LinkedIn"
+      },
+      {
+        url: "https://twitter.com/ricardoerikson",
+        classes: "fab fa-twitter",
+        tooltip: "Twitter"
+      },
+      {
+        url: "https://github.com/ricardoerikson",
+        classes: "fab fa-github",
+        tooltip: "GitHub"
+      },
+      {
+        url: "https://www.hackerrank.com/ricardoerikson",
+        classes: "fab fa-hackerrank",
+        tooltip: "HackerRank"
+      },
+      {
+        url: "mailto:ricardo@ricardoerikson.me",
+        classes: "fas fa-at",
+        tooltip: "Email"
+      }
+    ]
   },
   about: {
     sections: [
@@ -26,11 +53,11 @@ export const content = {
       },
       {
         level: 2,
-        title: "My interests",
+        title: "Topics of interest",
         paragraphs: [
           {
             type: "list",
-            text: 'My main interests are the following (not necessarily in that order):',
+            text: 'My main topics of interest are the following (not necessarily in that order):',
             list: [
               "High performance in professional and personal life",
               "Derivatives/stocks market",
@@ -47,32 +74,5 @@ export const content = {
         ]
       }
     ]
-  },
-  links: [
-    {
-      url: "https://linkedin.com/in/ricardoerikson",
-      classes: "fab fa-linkedin",
-      tooltip: "LinkedIn"
-    },
-    {
-      url: "https://twitter.com/ricardoerikson",
-      classes: "fab fa-twitter",
-      tooltip: "Twitter"
-    },
-    {
-      url: "https://github.com/ricardoerikson",
-      classes: "fab fa-github",
-      tooltip: "GitHub"
-    },
-    {
-      url: "https://www.hackerrank.com/ricardoerikson",
-      classes: "fab fa-hackerrank",
-      tooltip: "HackerRank"
-    },
-    {
-      url: "mailto:ricardo@ricardoerikson.me",
-      classes: "fas fa-at",
-      tooltip: "Email"
-    }
-  ]
+  }
 }
