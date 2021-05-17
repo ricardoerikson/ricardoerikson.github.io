@@ -1,3 +1,20 @@
+# [1.2.0](https://github.com/ricardoerikson/ricardoerikson.github.io/compare/v1.1.1...v1.2.0) (2021-05-17)
+
+
+### Bug Fixes
+
+* **grow:** fix width difference when page overflows window height ([7d8f1a3](https://github.com/ricardoerikson/ricardoerikson.github.io/commit/7d8f1a3cc1c06d632de5b2ced6c69b02912bf1a9))
+
+
+### Features
+
+* **blog:** add blog page ([c5dc41a](https://github.com/ricardoerikson/ricardoerikson.github.io/commit/c5dc41ab48ec996f18bf30e5bceac1d273c20806))
+* **contact:** add contact page ([74e7012](https://github.com/ricardoerikson/ricardoerikson.github.io/commit/74e70123586dc9e6e8d7029435199c1ef78ef5b5))
+* **content:** fix missing content ([0e4f558](https://github.com/ricardoerikson/ricardoerikson.github.io/commit/0e4f5582c8df619ac147203e8a24857df16c46ac))
+* **home:** add home link at navbar ([b182dcb](https://github.com/ricardoerikson/ricardoerikson.github.io/commit/b182dcbfa48080bbadfc8401abfb1af4afc01608))
+* **icon:** add angular component for icons ([659b820](https://github.com/ricardoerikson/ricardoerikson.github.io/commit/659b820693e68045ee68940e3d3f4cdb6bc3c447))
+* **tooltip:** add tooltips to icons ([70cd90f](https://github.com/ricardoerikson/ricardoerikson.github.io/commit/70cd90f8adefe6541812846f4c076cda6f59c8f2))
+
 ## [1.1.1](https://github.com/ricardoerikson/ricardoerikson.github.io/compare/v1.1.0...v1.1.1) (2020-11-22)
 
 
