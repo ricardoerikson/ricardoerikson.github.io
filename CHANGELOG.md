@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/ricardoerikson/ricardoerikson.github.io/compare/v1.2.0...v1.2.1) (2021-05-17)
+
+
+### Bug Fixes
+
+* **content:** fix typo ([3dea930](https://github.com/ricardoerikson/ricardoerikson.github.io/commit/3dea93065633133d9b7b6c9e589eb2c2395a19ab))
+
 # [1.2.0](https://github.com/ricardoerikson/ricardoerikson.github.io/compare/v1.1.1...v1.2.0) (2021-05-17)
 
 
