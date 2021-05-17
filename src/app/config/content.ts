@@ -72,6 +72,7 @@ export const content = {
               "High performance in professionlinkClasal and personal life",
               "Derivatives/stocks market",
               "Software development",
+              "Recommender systems",
               "Decision-making",
               "Running"
             ]
@@ -104,7 +105,7 @@ export const content = {
         paragraphs: [
           {
             type: 'list',
-            text: 'You can connect, follow me You can connect, follow me and send messages on the following social media:',
+            text: 'You can connect, follow me and send me messages on the following social media:',
             list: [
               '<a class="${ link.primary }" target="blank" href="https://linkedin.com/in/ricardoerikson">LinkedIn</a>',
               '<a class="${ link.primary }" target="blank" href="https://twitter.com/ricardoerikson">Twitter</a>',
