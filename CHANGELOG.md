@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/ricardoerikson/ricardoerikson.github.io/compare/v1.2.1...v1.3.0) (2022-03-10)
+
+
+### Features
+
+* **new job:** add 2022 updates ([dfef215](https://github.com/ricardoerikson/ricardoerikson.github.io/commit/dfef215b4b87c50b946e96026acb85292b5a2e2a))
+
 ## [1.2.1](https://github.com/ricardoerikson/ricardoerikson.github.io/compare/v1.2.0...v1.2.1) (2021-05-17)
 
 
