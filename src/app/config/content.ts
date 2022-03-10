@@ -1,7 +1,7 @@
 export const content = {
   home: {
     hi: "Hey! I'm Ricardo Erikson!",
-    presentationText: "I'm a software engineer from Brazil, and I'm passionate about software design and high-quality code.",
+    presentationText: "I'm a Brazilian software engineer living and working in the Netherlands. I'm passionate about software design and high-quality code.",
     links: [
       {
         url: "https://linkedin.com/in/ricardoerikson",
@@ -48,12 +48,17 @@ export const content = {
         paragraphs: [
           {
             type: "text",
-            text: "My name is Ricardo, and I'm a software engineer with 10+ years of experience in the software industry. I had the opportunity to collaborate with big players of the software industry like Nokia and Samsung. Currently, I work for <a href='https://www.bairesdev.com' class='${ link.primary }'>BairesDev</a> as a Golang engineer.",
+            text: "My name is Ricardo, and I'm a Brazilian (🇧🇷) software engineer with 15+ years of experience in the software industry. I had the opportunity to collaborate with big players of the software industry like Nokia and Samsung. In the past year, I worked remotely for <a href='https://www.bairesdev.com'  target='blank' class='${ link.primary }'>BairesDev</a>, a software outsourcing company based in San Francisco, CA, USA. In addition, I worked as a Golang engineer and Tech Lead in the cloud solutions team of Abbott, a multinational medical device and health care company.",
             templates: ['link.primary']
           },
           {
             type: "text",
-            text: "During my professional career, I had the opportunity to work with many technologies like Java, JavaScript, TypeScript, Python, Angular, Docker, and most recently, Golang and React. None of those are in your tech stack? Bring it on! I learn fast."
+            text: "Currently, I live and work in Amsterdam, the Netherlands (🇳🇱). I work as a backend software engineer for <a href='https://sniptech.com'  target='blank' class='${ link.primary }'>SnipTech</a>, a company focused on creating a software platform for unifying financial services. I mainly use Golang, Docker, Kubernetes, Terraform and Google Cloud Platform (GCP) to build microservices.",
+            templates: ['link.primary']
+          },
+          {
+            type: "text",
+            text: "During my professional career, I had the opportunity to work with many languages and technologies like Java, JavaScript, TypeScript, Python, Angular, React, Docker, Kubernetes, and AWS. Currently, I use Golang to build microservices and high-traffic distributed systems. None of those are in your tech stack? Bring it on! I learn fast."
           },
           {
             type: "text",
@@ -69,11 +74,10 @@ export const content = {
             type: "list",
             text: 'My main topics of interest are the following (not necessarily in that order):',
             list: [
-              "High performance in professional and personal life",
-              "Derivatives/stocks market",
               "Software development",
               "Recommender systems",
               "Decision-making",
+              "Formula 1",
               "Running"
             ]
           },
