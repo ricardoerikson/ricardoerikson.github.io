@@ -10,12 +10,10 @@ const appRoutes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'blog', component: BlogComponent },
-]
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(appRoutes, { relativeLinkResolution: 'legacy' })],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(appRoutes)],
+  exports: [RouterModule],
 })
-export class AppRoutingModule {
-
-}
+export class AppRoutingModule {}
