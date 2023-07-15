@@ -9,10 +9,15 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/build
+        with:
+          google-analytics: ${{ secrets.GOOGLE_ANALYTICS }}
 
   release-dry-run:
     needs: [build]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: ./.github/actions/release-dry-run
+      - uses: ./.github/actions/release
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          dry-run: true

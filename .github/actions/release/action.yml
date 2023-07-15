@@ -1,4 +1,13 @@
 name: Release
+description: Releases a new version
+inputs:
+  github-token:
+    description: GitHub PAT
+    required: true
+  dry-run:
+    description: Runs semantic-release in dry-run mode
+    default: "true"
+
 runs:
   using: composite
   steps:
@@ -7,6 +16,14 @@ runs:
       with:
         fetch-depth: 0
     - name: "Release"
+      if: ${{ inputs.dry-run == 'false' }}
+      shell: bash
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ inputs.github-token }}
       run: npm run semantic-release
+    - name: "Release (dry-run)"
+      if: ${{ inputs.dry-run == 'true' }}
+      shell: bash
+      env:
+        GITHUB_TOKEN: ${{ inputs.github-token }}
+      run: npm run semantic-release:dry-run
