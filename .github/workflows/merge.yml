@@ -9,13 +9,10 @@ on:
       - main
 
 jobs:
-  if_merged:
+  build:
     if: >-
       github.event.pull_request.merged == true &&
       "!contains(github.event.head_commit.message, '[skip ci]')"
-
-  build:
-    needs: [if_merged]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
