@@ -1,3 +1,17 @@
+# [1.4.0](https://github.com/ricardoerikson/ricardoerikson.github.io/compare/v1.3.0...v1.4.0) (2023-07-15)
+
+
+### Bug Fixes
+
+* add dry-run option to deploy action ([8465fb2](https://github.com/ricardoerikson/ricardoerikson.github.io/commit/8465fb27a17fc8b1417e01172d1fe2d89373aefd))
+* add semantic-release ([112a930](https://github.com/ricardoerikson/ricardoerikson.github.io/commit/112a930ffae3bcee4c6904e0829ff83fffe495c7))
+
+
+### Features
+
+* create a single workflow ([e65463b](https://github.com/ricardoerikson/ricardoerikson.github.io/commit/e65463bbc28eee2ecd8b582b89a9116d278efcca))
+* **test:** a new change ([58982ed](https://github.com/ricardoerikson/ricardoerikson.github.io/commit/58982edaed6a85b6eea19e3b6212431e5f17151e))
+
 # [1.3.0](https://github.com/ricardoerikson/ricardoerikson.github.io/compare/v1.2.1...v1.3.0) (2022-03-10)
 
 
