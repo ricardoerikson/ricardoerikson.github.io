@@ -19,6 +19,9 @@ runs:
       uses: actions/setup-node@v3
       with:
         node-version: "18.x"
+    - name: Install NPM dependencies
+      shell: bash
+      run: npm i
     - name: "Release"
       if: ${{ inputs.dry-run == 'false' }}
       shell: bash
