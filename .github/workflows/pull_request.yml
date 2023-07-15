@@ -32,4 +32,4 @@ jobs:
           GIT_NAME: ${{ secrets.GIT_NAME }}
           GIT_EMAIL: ${{ secrets.GIT_EMAIL }}
         run: |
-          npx semantic-release:dry-run
+          npm run semantic-release:dry-run
