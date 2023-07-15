@@ -10,6 +10,9 @@ inputs:
   git-email:
     description: Git email
     required: true
+  github-token:
+    description: GitHub PAT
+    required: true
   dry-run:
     description: Dry run
     default: "true"
@@ -29,6 +32,7 @@ runs:
       if: ${{ inputs.dry-run == 'true' }}
       shell: bash
       env:
+        GITHUB_TOKEN: ${{ inputs.github-token }}
         CNAME: ${{ inputs.cname }}
         GIT_NAME: ${{ inputs.git-name }}
         GIT_EMAIL: ${{ inputs.git-email }}
@@ -38,6 +42,7 @@ runs:
       if: ${{ inputs.dry-run == 'false' }}
       shell: bash
       env:
+        GITHUB_TOKEN: ${{ inputs.github-token }}
         CNAME: ${{ inputs.cname }}
         GIT_NAME: ${{ inputs.git-name }}
         GIT_EMAIL: ${{ inputs.git-email }}
