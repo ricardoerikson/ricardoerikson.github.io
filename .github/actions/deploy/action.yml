@@ -1,0 +1,32 @@
+name: Deploy
+description: Deploys to GitHub Pages
+inputs:
+  cname:
+    description: Custom Domain
+    required: true
+  git-name:
+    description: Git name
+    required: true
+  git-email:
+    description: Git email
+    required: true
+runs:
+  using: composite
+  steps:
+    - name: "Download all workflow run artifacts"
+      uses: actions/download-artifact@v3
+    - name: "Setup Node.js environment"
+      uses: actions/setup-node@v3
+      with:
+        node-version: "18.x"
+    - name: Install NPM dependencies
+      shell: bash
+      run: npm i
+    - name: "Deploy website"
+      shell: bash
+      env:
+        CNAME: ${{ inputs.cname }}
+        GIT_NAME: ${{ inputs.git-name }}
+        GIT_EMAIL: ${{ inputs.git-email }}
+      run: |
+        npm run deploy:prod

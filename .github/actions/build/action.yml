@@ -1,0 +1,33 @@
+name: Build
+description: Builds website
+inputs:
+  google-analytics:
+    description: Google Analytics secret
+    required: true
+runs:
+  using: composite
+  steps:
+    - name: "Checkout"
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+    - name: "Setup Node.js environment"
+      uses: actions/setup-node@v3
+      with:
+        node-version: "18.x"
+    - name: Install NPM dependencies
+      shell: bash
+      run: npm i
+    - name: "Build artifacts"
+      shell: bash
+      env:
+        GOOGLE_ANALYTICS: ${{ inputs.google-analytics }}
+      run: |
+        npm run build:prod
+        node template-compiler.js
+    - name: "Upload Artifact"
+      uses: actions/upload-artifact@v3
+      with:
+        name: dist
+        path: dist
+        retention-days: 1

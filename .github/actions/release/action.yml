@@ -1,0 +1,36 @@
+name: Release
+description: Releases a new version
+inputs:
+  github-token:
+    description: GitHub PAT
+    required: true
+  dry-run:
+    description: Runs semantic-release in dry-run mode
+    default: "true"
+
+runs:
+  using: composite
+  steps:
+    - name: "Checkout"
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+    - name: "Setup Node.js environment"
+      uses: actions/setup-node@v3
+      with:
+        node-version: "18.x"
+    - name: Install NPM dependencies
+      shell: bash
+      run: npm i
+    - name: "Release"
+      if: ${{ inputs.dry-run == 'false' }}
+      shell: bash
+      env:
+        GITHUB_TOKEN: ${{ inputs.github-token }}
+      run: npm run semantic-release
+    - name: "Release (dry-run)"
+      if: ${{ inputs.dry-run == 'true' }}
+      shell: bash
+      env:
+        GITHUB_TOKEN: ${{ inputs.github-token }}
+      run: npm run semantic-release:dry-run
