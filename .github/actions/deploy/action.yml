@@ -10,6 +10,9 @@ inputs:
   git-email:
     description: Git email
     required: true
+  dry-run:
+    description: Dry run
+    default: "true"
 runs:
   using: composite
   steps:
@@ -23,6 +26,7 @@ runs:
       shell: bash
       run: npm i
     - name: "Deploy website"
+      if: ${{ inputs.dry-run == 'true' }}
       shell: bash
       env:
         CNAME: ${{ inputs.cname }}
@@ -30,3 +34,12 @@ runs:
         GIT_EMAIL: ${{ inputs.git-email }}
       run: |
         npm run deploy:prod
+    - name: "Deploy website (dry-run)"
+      if: ${{ inputs.dry-run == 'false' }}
+      shell: bash
+      env:
+        CNAME: ${{ inputs.cname }}
+        GIT_NAME: ${{ inputs.git-name }}
+        GIT_EMAIL: ${{ inputs.git-email }}
+      run: |
+        npm run deploy:prod:dry-run

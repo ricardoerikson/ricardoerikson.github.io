@@ -5,6 +5,7 @@
     "start": "ng serve",
     "build:prod": "ng build",
     "deploy:prod": "ng deploy --no-silent --branch=deploy --cname=$CNAME --name='$GIT_NAME' --email='$GIT_EMAIL'",
+    "deploy:prod:dry-run": "ng deploy --dry-run --no-silent --branch=deploy --cname=$CNAME --name='$GIT_NAME' --email='$GIT_EMAIL'",
     "semantic-release": "semantic-release",
     "semantic-release:dry-run": "semantic-release --dry-run"
   },
