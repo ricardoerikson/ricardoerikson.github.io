@@ -1,0 +1,10 @@
+steps:
+  - name: "Download all workflow run artifacts"
+    uses: actions/download-artifact@v3
+  - name: "Deploy website"
+    env:
+      CNAME: ${{ secrets.CUSTOM_DOMAIN }}
+      GIT_NAME: ${{ secrets.GIT_NAME }}
+      GIT_EMAIL: ${{ secrets.GIT_EMAIL }}
+    run: |
+      npm run deploy:prod

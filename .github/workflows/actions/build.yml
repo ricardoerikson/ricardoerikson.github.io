@@ -1,0 +1,23 @@
+steps:
+  - name: "Checkout"
+    uses: actions/checkout@v3
+    with:
+      fetch-depth: 0
+  - name: "Setup Node.js environment"
+    uses: actions/setup-node@v3
+    with:
+      node-version: "18.x"
+  - name: Install NPM dependencies
+    run: npm i
+  - name: "Build artifacts"
+    env:
+      GOOGLE_ANALYTICS: ${{ secrets.GOOGLE_ANALYTICS }}
+    run: |
+      npm run build:prod
+      node template-compiler.js
+  - name: "Upload Artifact"
+    uses: actions/upload-artifact@v3
+    with:
+      name: dist
+      path: dist
+      retention-days: 1
