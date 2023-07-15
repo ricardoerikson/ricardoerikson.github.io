@@ -1,5 +1,5 @@
 <section>
-  <app-title level="{{section.level}}" title="{{section.title}}"></app-title>
+  <app-title [level]="section.level" title="{{section.title}}"></app-title>
 
   <app-section-content *ngFor="let paragraph of section.paragraphs" [paragraph]="paragraph"></app-section-content>
 </section>
