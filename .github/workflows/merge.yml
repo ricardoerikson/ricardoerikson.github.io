@@ -13,15 +13,12 @@ jobs:
     if: >-
       github.event.pull_request.merged == true &&
       "!contains(github.event.head_commit.message, '[skip ci]')"
-    runs-on: ubuntu-latest
-    uses: ./.github/actions/build.yml
+    !include jobs/build.yml
 
   deploy:
     needs: build
-    runs-on: ubuntu-latest
-    uses: ./.github/actions/deploy.yml
+    !include jobs/deploy.yml
 
   release:
     needs: deploy
-    runs-on: ubuntu-latest
-    uses: ./.github/workflows/actions/release.yml
+    !include jobs/release.yml
