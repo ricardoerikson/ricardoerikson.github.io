@@ -5,8 +5,14 @@ on:
 jobs:
   build:
     if: "!contains(github.event.head_commit.message, '[skip ci]')"
-    !include jobs/build.yml
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/build
 
-  release:
-    needs: build
-    !include jobs/release-dry-run.yml
+  release-dry-run:
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/release-dry-run

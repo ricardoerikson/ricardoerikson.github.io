@@ -9,16 +9,28 @@ on:
       - main
 
 jobs:
-  build:
+  if_merged:
     if: >-
       github.event.pull_request.merged == true &&
       "!contains(github.event.head_commit.message, '[skip ci]')"
-    !include jobs/build.yml
+
+  build:
+    needs: [if_merged]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/build
 
   deploy:
-    needs: build
-    !include jobs/deploy.yml
+    needs: [build]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/deploy
 
   release:
-    needs: deploy
-    !include jobs/release.yml
+    needs: [deploy]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/release
