@@ -28,9 +28,10 @@ jobs:
           cname: ${{ secrets.CUSTOM_DOMAIN }}
           git-name: ${{ secrets.GIT_NAME }}
           git-email: ${{ secrets.GIT_EMAIL }}
+          dry-run: false
 
   release:
-    needs: [deploy]
+    needs: [build]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
