@@ -1,10 +1,13 @@
-name: Pull request
+name: "GitHub Pages CI"
 on:
+  push:
+    branches:
+      - main
   pull_request:
 
 jobs:
   build:
-    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    if: ${{ !contains(github.event.head_commit.message, '[skip ci]') }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -12,20 +15,20 @@ jobs:
         with:
           google-analytics: ${{ secrets.GOOGLE_ANALYTICS }}
 
-  deploy-dry-run:
+  deploy:
     needs: [build]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/deploy
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
           cname: ${{ secrets.CUSTOM_DOMAIN }}
           git-name: ${{ secrets.GIT_NAME }}
           git-email: ${{ secrets.GIT_EMAIL }}
-          dry-run: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          dry-run: ${{ github.ref != 'refs/heads/main' }} # dry-run if not on main branch
 
-  release-dry-run:
+  release:
     needs: [build]
     runs-on: ubuntu-latest
     steps:
@@ -33,4 +36,4 @@ jobs:
       - uses: ./.github/actions/release
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          dry-run: true
+          dry-run: ${{ github.ref != 'refs/heads/main' }} # dry-run if not on main branch
