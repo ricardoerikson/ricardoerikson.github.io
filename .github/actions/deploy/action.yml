@@ -29,7 +29,7 @@ runs:
       shell: bash
       run: npm i
     - name: "Deploy website"
-      if: ${{ inputs.dry-run == 'true' }}
+      if: ${{ inputs.dry-run == 'false' }}
       shell: bash
       env:
         GITHUB_TOKEN: ${{ inputs.github-token }}
@@ -39,7 +39,7 @@ runs:
       run: |
         npm run deploy:prod
     - name: "Deploy website (dry-run)"
-      if: ${{ inputs.dry-run == 'false' }}
+      if: ${{ inputs.dry-run == 'true' }}
       shell: bash
       env:
         GITHUB_TOKEN: ${{ inputs.github-token }}
