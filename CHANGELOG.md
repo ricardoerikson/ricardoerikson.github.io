@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/ricardoerikson/ricardoerikson.github.io/compare/v1.4.0...v1.4.1) (2023-07-16)
+
+
+### Bug Fixes
+
+* test pipeline again ([52f38d7](https://github.com/ricardoerikson/ricardoerikson.github.io/commit/52f38d725b79ca5e7fecbe45504f5294c3a32593))
+
 # [1.4.0](https://github.com/ricardoerikson/ricardoerikson.github.io/compare/v1.3.0...v1.4.0) (2023-07-15)
 
 
