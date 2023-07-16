@@ -12,17 +12,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: ./.github/actions/build
+      - name: Build
+        uses: ./.github/actions/build
         with:
           google-analytics: ${{ secrets.GOOGLE_ANALYTICS }}
 
   deploy:
-    name: "Deploy ${{ github.ref == 'refs/heads/main' && '' || '(dry-run)' }}"
+    name: "Deploy"
     needs: [build]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: ./.github/actions/deploy
+      - name: Deploy
+        uses: ./.github/actions/deploy
         with:
           cname: ${{ secrets.CUSTOM_DOMAIN }}
           git-name: ${{ secrets.GIT_NAME }}
@@ -31,12 +33,13 @@ jobs:
           dry-run: ${{ github.ref != 'refs/heads/main' }} # dry-run if not on main branch
 
   release:
-    name: "Release ${{ github.ref == 'refs/heads/main' && '' || '(dry-run)' }}"
+    name: "Release"
     needs: [build]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: ./.github/actions/release
+      - name: Release
+        uses: ./.github/actions/release
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           dry-run: ${{ github.ref != 'refs/heads/main' }} # dry-run if not on main branch
