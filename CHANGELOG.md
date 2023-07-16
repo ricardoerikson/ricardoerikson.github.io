@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/ricardoerikson/ricardoerikson.github.io/compare/v1.4.1...v1.4.2) (2023-07-16)
+
+
+### Bug Fixes
+
+* add deploy command directly in the pipeline ([546bfb1](https://github.com/ricardoerikson/ricardoerikson.github.io/commit/546bfb1f511185fa9b55a3998084bc206496b430))
+
 ## [1.4.1](https://github.com/ricardoerikson/ricardoerikson.github.io/compare/v1.4.0...v1.4.1) (2023-07-16)
 
 
