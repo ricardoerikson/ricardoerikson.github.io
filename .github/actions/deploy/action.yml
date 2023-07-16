@@ -38,14 +38,11 @@ runs:
         GIT_NAME: ${{ inputs.git-name }}
         GIT_EMAIL: ${{ inputs.git-email }}
       run: |
-        npx ng deploy --no-silent --branch=deploy --cname="$CNAME" --name="$GIT_NAME" --email="$GIT_EMAIL"
+        npx ng deploy --no-silent --branch=deploy --build=false --cname="$CNAME" --name="$GIT_NAME" --email="$GIT_EMAIL"
     - name: "Deploy website (dry-run)"
       if: ${{ inputs.dry-run == 'true' }}
       shell: bash
       env:
         GITHUB_TOKEN: ${{ inputs.github-token }}
-        CNAME: ${{ inputs.cname }}
-        GIT_NAME: ${{ inputs.git-name }}
-        GIT_EMAIL: ${{ inputs.git-email }}
       run: |
-        npx ng deploy --no-silent --dry-run --branch=deploy --cname="$CNAME" --name="$GIT_NAME" --email="$GIT_EMAIL"
+        npx ng deploy --no-silent --dry-run --branch=deploy --cname="${{ inputs.cname }}" --name="${{ inputs.git-name }}" --email="${{ inputs.git-email }}"
