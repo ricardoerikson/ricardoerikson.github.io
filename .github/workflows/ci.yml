@@ -4,8 +4,6 @@ on:
     branches:
       - main
   pull_request:
-env:
-  ACTION: ${{ github.ref == 'refs/heads/main' && '(publish)' || '(dry-run)' }}
 
 jobs:
   build:
@@ -20,7 +18,7 @@ jobs:
           google-analytics: ${{ secrets.GOOGLE_ANALYTICS }}
 
   deploy:
-    name: "Deploy $ACTION"
+    name: "Deploy"
     needs: [build]
     runs-on: ubuntu-latest
     steps:
@@ -35,7 +33,7 @@ jobs:
           dry-run: ${{ github.ref != 'refs/heads/main' }} # dry-run if not on main branch
 
   release:
-    name: "Release $ACTION"
+    name: "Release"
     needs: [build]
     runs-on: ubuntu-latest
     steps:
