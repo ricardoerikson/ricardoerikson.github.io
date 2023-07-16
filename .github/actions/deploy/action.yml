@@ -37,7 +37,7 @@ runs:
         GIT_NAME: ${{ inputs.git-name }}
         GIT_EMAIL: ${{ inputs.git-email }}
       run: |
-        ng deploy --no-silent --branch=deploy --cname="$CNAME" --name="$GIT_NAME" --email="$GIT_EMAIL"
+        npx ng deploy --no-silent --branch=deploy --cname="$CNAME" --name="$GIT_NAME" --email="$GIT_EMAIL"
     - name: "Deploy website (dry-run)"
       if: ${{ inputs.dry-run == 'true' }}
       shell: bash
